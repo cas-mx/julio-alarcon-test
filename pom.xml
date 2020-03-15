@@ -7,7 +7,7 @@
 	<groupId>com.java.test</groupId>
 	<artifactId>REStTest</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<packaging>jar</packaging>
+	<packaging>war</packaging>
 
 	<name>REStTest Maven Webapp</name>
 	<!-- FIXME change it to the project's website -->

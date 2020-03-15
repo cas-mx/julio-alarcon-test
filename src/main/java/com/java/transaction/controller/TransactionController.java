@@ -91,30 +91,9 @@ public class TransactionController {
 	public ResponseEntity<String>createTransaction(@RequestBody Transaction trans ) {
 		logger.info("Start createTransaction.");
 		FileUtil fileUtil = FileUtil.getInstance();
-		//Get the file reference
-		//Path path = Paths.get("c://Transactions.txt");
-		
-		 /* source = Paths.get(this.getClass().getResource("/").getPath()); Path
-		 * newFolder = Paths.get(source.toAbsolutePath() + "/employeesFolder/"); try {
-		 * Files.createDirectories(newFolder); } catch (IOException e1) { 
-		 * Auto-generated catch block e1.printStackTrace(); }
-		 */
 		try {
 			fileUtil.write("Transactions.txt", trans.toString());
-			/*
-			 * Files.write(Paths.get("c://workspace//Transactions.txt"),
-			 * trans.toString().getBytes(), StandardOpenOption.CREATE,
-			 * StandardOpenOption.APPEND);
-			 */
 		}finally {}
-
-		//Use try-with-resource to get auto-closeable writer instance
-		/*
-		 * try (BufferedWriter writer = Files.newBufferedWriter(path)) {
-		 * writer.write(trans.getId()+" " +trans+""); } catch (IOException e) {
-		 * Auto-generated catch block e.printStackTrace(); }
-		 */
-	//	emp.setCreatedDate();
 		tansData.put(trans.getUuid(), trans);
 		return new ResponseEntity<>(trans.toString(),HttpStatus.CREATED);
 	}
