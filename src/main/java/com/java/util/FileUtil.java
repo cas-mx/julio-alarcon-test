@@ -38,12 +38,12 @@ public class FileUtil {
 		if (OS.contains("windows")) {
 			StringBuffer d = new StringBuffer(main.getPath().toString().replace("/", "\\\\"));
 			array = d.toString().split("\\\\");
-			for(int i=0; i<array.length-5;i++) {
+			for(int i=0; i<array.length-6;i++) {
 				output.append(array[i]+"\\");
 			}
 		}else {
 			array = main.getPath().toString().split("/");
-			for(int i=0; i<array.length-5;i++) {
+			for(int i=0; i<array.length-6;i++) {
 				output.append(array[i]+"/");
 			}
 		}
